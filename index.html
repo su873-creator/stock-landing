@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StockLens - 주식 랜딩 페이지</title>
+<style>
+  :root { --bg:#0b1220; --card:#131c31; --text:#e8edf7; --muted:#8f9bb3; --up:#ef4444; --down:#3b82f6; --accent:#22c55e; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Malgun Gothic",system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:20px 6%; }
+  .logo { font-weight:800; font-size:1.3rem; }
+  .logo span { color:var(--accent); }
+  nav a { color:var(--muted); text-decoration:none; margin-left:24px; }
+  nav a:hover { color:var(--text); }
+  .hero { text-align:center; padding:90px 6% 60px; }
+  .hero h1 { font-size:clamp(2rem,5vw,3.4rem); line-height:1.25; }
+  .hero h1 em { color:var(--accent); font-style:normal; }
+  .hero p { color:var(--muted); margin:20px auto 32px; max-width:520px; }
+  .btn { display:inline-block; background:var(--accent); color:#04210f; padding:14px 32px; border-radius:10px; font-weight:700; text-decoration:none; }
+  section { padding:50px 6%; max-width:1100px; margin:auto; }
+  h2 { margin-bottom:24px; font-size:1.5rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+  .card { background:var(--card); border-radius:14px; padding:22px; }
+  .card h3 { font-size:1rem; color:var(--muted); font-weight:500; }
+  .price { font-size:1.6rem; font-weight:700; margin:6px 0; }
+  .up { color:var(--up); } .down { color:var(--down); }
+  .feature p { color:var(--muted); font-size:.95rem; }
+  .feature .icon { font-size:1.8rem; margin-bottom:8px; }
+  .cta { text-align:center; background:var(--card); border-radius:18px; padding:50px 20px; }
+  footer { text-align:center; color:var(--muted); font-size:.8rem; padding:40px 6%; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Stock<span>Lens</span></div>
+  <nav><a href="#market">시장</a><a href="#features">기능</a><a href="#start">시작하기</a></nav>
+</header>
+
+<div class="hero">
+  <h1>내 투자를 한눈에,<br><em>똑똑하게</em> 시작하세요</h1>
+  <p>관심 종목 추적, 실시간 알림, 간단한 포트폴리오 분석까지. 초보 투자자를 위한 가장 쉬운 주식 도우미예요.</p>
+  <a class="btn" href="#start">무료로 시작하기</a>
+</div>
+
+<section id="market">
+  <h2>오늘의 시장 (예시 데이터)</h2>
+  <div class="grid">
+    <div class="card"><h3>KOSPI</h3><div class="price">2,640.12</div><div class="up">▲ 0.85%</div></div>
+    <div class="card"><h3>KOSDAQ</h3><div class="price">862.40</div><div class="down">▼ 0.32%</div></div>
+    <div class="card"><h3>S&amp;P 500</h3><div class="price">5,320.55</div><div class="up">▲ 0.41%</div></div>
+    <div class="card"><h3>USD/KRW</h3><div class="price">1,372.00</div><div class="down">▼ 0.10%</div></div>
+  </div>
+</section>
+
+<section id="features">
+  <h2>주요 기능</h2>
+  <div class="grid">
+    <div class="card feature"><div class="icon">📈</div><h3>관심 종목</h3><p>자주 보는 종목을 모아 한 화면에서 확인해요.</p></div>
+    <div class="card feature"><div class="icon">🔔</div><h3>가격 알림</h3><p>목표가에 도달하면 바로 알려 드려요.</p></div>
+    <div class="card feature"><div class="icon">📊</div><h3>포트폴리오 분석</h3><p>수익률과 자산 비중을 쉽게 보여 줘요.</p></div>
+  </div>
+</section>
+
+<section id="start">
+  <div class="cta">
+    <h2>지금 바로 시작해 보세요</h2>
+    <p style="color:var(--muted);margin-bottom:24px">이메일만 입력하면 출시 소식을 가장 먼저 받아볼 수 있어요.</p>
+    <a class="btn" href="mailto:hello@example.com">출시 알림 받기</a>
+  </div>
+</section>
+
+<footer>
+  ※ 본 페이지의 시세는 예시 데이터이며 투자 권유가 아니에요. 투자 판단과 책임은 본인에게 있어요.<br>
+  © 2026 StockLens
+</footer>
+</body>
+</html>
